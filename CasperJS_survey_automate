@@ -130,3 +130,49 @@ casper.then(function() {
 casper.run(function() {
    this.test.done();
 });
+
+
+
+~~~~~~~~~~~~~~~~~~~Results when executing the file~~~~~~~~~~~~~~~~~~~~~~~~
+c:\>casperjs test 1.js
+Test file: 1.js
+Validate input fields on Page 1.
+PASS Hudl QA Project loaded successfully
+PASS The First name field exists
+PASS The Last name field exists
+PASS The Email field exists
+PASS The Next page button exists
+Fill the input fields on Page 1.
+PASS Load of first name is successful.
+PASS Load of last name  is successful.
+PASS Load of email is successful.
+Wait a second to allow page 2 to load.
+Validate input fields on Page 2.
+PASS The State dropdown field exists
+PASS The Football checkbox exists
+PASS The Basketball checkbox exists
+PASS The Soccer checkbox exists
+PASS The Volleyball checkbox exists
+PASS The Baseball checkbox exists
+PASS The Roller Derby checkbox exists
+PASS The Rugby checkbox exists
+PASS The Biking checkbox exists
+PASS The Running checkbox exists
+PASS The Other checkbox exists
+PASS The Submit button exists
+PASS The Previous page button exists
+Fill the input fields on Page 2.
+PASS Football is checked.
+PASS Basketball is checked.
+PASS Soccer is checked.
+PASS Volleyball is checked.
+PASS Baseball is checked.
+PASS Roller Derby is checked.
+PASS Rugby is checked.
+PASS Biking is checked.
+PASS Running is checked.
+PASS Other is checked.
+Clicking on the Submit button
+Wait a second to allow page 3 to load.
+PASS Survey Submit confirmation page loaded
+PASS 32 tests executed in 4.933s, 32 passed, 0 failed, 0 dubious, 0 skipped.
