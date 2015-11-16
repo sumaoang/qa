@@ -40,6 +40,7 @@ The flow of my automated test is as follows
 * Validate that page 2 loads successfully by confirming that the elements on Page 2 that I will fill are available
 * Fill the fields and validate that they filled successfully
 * Click on the Submit button
+* Validate that page 3 loads successfully
 
 Two additional tests that I intended to include are validating that the state dropdown box filled correct and testing of the previous page button.  Having no prior experience with CasperJS and having to learn during the process, I was not able to figure out the correct syntax to execute these two tests.  
 
