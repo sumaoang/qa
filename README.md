@@ -1,6 +1,6 @@
 # qa
 # Introduction
-Included here is my test document for the process of uploading video to the schedule entry and my CasperJS file for the Hudl QA Project survey automation task.  I will describe in detail, the flow of each item.
+Included are my deliverables for the Documentation Project and the Automation Project, links to my test document for the process of uploading video to the schedule entry and my CasperJS file for the Hudl QA Project survey automation task.  I will describe in detail, the thought process and details of each item.
 
 # Documentation Project
 ## Test document template
@@ -19,7 +19,7 @@ In here, I provided a summary of the results of the Test cases that lists how ma
 Provide is an example summary of the mocked up cycle testing. In addition, I have included a user experience comment for the Game Video section.
 
 ###Test Cases
-Provided here is a list of the test cases to run, the list includes what is being tested and what the expected results will be.  Here, I detail the type of test (authorization, functionality, compatibility, error handling, performance, etc.) as well as a section for Test case status.  If a test script fails, a defect number can be assigned and the severity calculated (Critical, High, Medium, Low). Severity is determined by the impact to the user and this will help facilitate a developer in prioritizing the defect.  
+Provided here is a list of the test cases to run, the list includes what is being tested and what the expected results will be.  Here, I detail the type of test (authorization, functionality, compatibility, error handling, performance, etc.) as well as a section for Test case status.  If a test script fails, a defect number can be assigned and the severity calculated (Critical, High, Medium, Low). Severity is determined by the team and by the impact to the user and this will help facilitate a developer in prioritizing the defect.
 
 I mocked up two cycle tests which included 2 defects during cycle 1 and in cycle 2, only a smaller subset of the test scripts required additional testing and all passed successfully.
 
