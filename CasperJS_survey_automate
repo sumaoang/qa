@@ -1,0 +1,132 @@
+//Test the the Hudl QA survey
+var config = {
+  url: 'http://hudl.wufoo.com/forms/qa-project',
+};
+
+config.form1 = {
+  "Field1": "Shannon",
+  "Field2": "Sumaoang",
+  "Field3": "sumaoang@gmail.com",
+};
+
+casper.start();
+
+casper.open(config.url);
+
+//Validate that Page 1 loaded successfully and that all required fields 
+//and buttons are available
+casper.then(function() {
+   this.echo("Validate input fields on Page 1.");
+   this.test.assertTitle("QA Project", "Hudl QA Project loaded successfully");
+   this.test.assertExists('#Field1', "The First name field exists");
+   this.test.assertExists('#Field2', "The Last name field exists");
+   this.test.assertExists('#Field3', "The Email field exists");
+   this.test.assertExists('#nextPageButton', "The Next page button exists");
+
+//Fill all fields and evaluate that the fields loaded with the expected data
+   this.echo("Fill the input fields on Page 1.");
+   this.fill('#form852', config.form1, true);
+   this.test.assertEvalEquals(function () {
+      return $('#form852 input[name="Field1"]').val();
+   }, config.form1.Field1, 'Load of first name is successful.');
+
+   this.test.assertEvalEquals(function () {
+      return $('#form852 input[name="Field2"]').val();
+   }, config.form1.Field2, 'Load of last name  is successful.');
+
+   this.test.assertEvalEquals(function () {
+      return $('#form852 input[name="Field3"]').val();
+   }, config.form1.Field3, 'Load of email is successful.');
+
+//Click on the Next Page Button to continue
+   this.click('#nextPageButton');
+   this.wait(1000, function() {
+        this.echo("Wait a second to allow page 2 to load.");
+   });
+});
+
+//Validate that Page 2 loaded successfully and that all required fields 
+//and buttons are available
+casper.then(function() {
+   this.echo("Validate input fields on Page 2.");
+   this.test.assertExists('#Field109', "The State dropdown field exists");
+   this.test.assertExists('#Field7', "The Football checkbox exists");
+   this.test.assertExists('#Field8', "The Basketball checkbox exists");
+   this.test.assertExists('#Field9', "The Soccer checkbox exists");
+   this.test.assertExists('#Field10', "The Volleyball checkbox exists");
+   this.test.assertExists('#Field11', "The Baseball checkbox exists");
+   this.test.assertExists('#Field12', "The Roller Derby checkbox exists");
+   this.test.assertExists('#Field13', "The Rugby checkbox exists");
+   this.test.assertExists('#Field14', "The Biking checkbox exists");
+   this.test.assertExists('#Field15', "The Running checkbox exists");
+   this.test.assertExists('#Field16', "The Other checkbox exists");
+   this.test.assertExists('#saveForm', "The Submit button exists");
+   this.test.assertExists('#previousPageButton', "The Previous page button exists");
+});
+
+//Fill all fields on Page 2
+casper.then(function() {
+   this.echo("Fill the input fields on Page 2.");
+   this.fill('#form852', {
+       'Field109': 1,
+       'Field7': 'Footbal',
+       'Field8': 'Basketball',
+       'Field9': 'Soccer',
+       'Field10': 'Volleyball',
+       'Field11': 'Baseball',
+       'Field12': 'Roller Derby',
+       'Field13': 'Rugby',
+       'Field14': 'Biking',
+       'Field15': 'Running',
+       'Field16': 'Other'
+   }, true);
+
+   this.test.assertEvalEquals(function () {
+      return $('#form852 input[name="Field7"]').val();
+   }, 'Football', 'Football is checked.');	
+   this.test.assertEvalEquals(function () {
+      return $('#form852 input[name="Field8"]').val();
+   }, 'Basketball', 'Basketball is checked.');	
+   this.test.assertEvalEquals(function () {
+      return $('#form852 input[name="Field9"]').val();
+   }, 'Soccer', 'Soccer is checked.');	
+   this.test.assertEvalEquals(function () {
+      return $('#form852 input[name="Field10"]').val();
+   }, 'Volleyball', 'Volleyball is checked.');	
+   this.test.assertEvalEquals(function () {
+      return $('#form852 input[name="Field11"]').val();
+   }, 'Baseball', 'Baseball is checked.');	
+   this.test.assertEvalEquals(function () {
+      return $('#form852 input[name="Field12"]').val();
+   }, 'Roller Derby', 'Roller Derby is checked.');	
+   this.test.assertEvalEquals(function () {
+      return $('#form852 input[name="Field13"]').val();
+   }, 'Rugby', 'Rugby is checked.');
+   this.test.assertEvalEquals(function () {
+      return $('#form852 input[name="Field14"]').val();
+   }, 'Biking', 'Biking is checked.');
+   this.test.assertEvalEquals(function () {
+      return $('#form852 input[name="Field15"]').val();
+   }, 'Running', 'Running is checked.');
+   this.test.assertEvalEquals(function () {
+      return $('#form852 input[name="Field16"]').val();
+   }, 'Other', 'Other is checked.');
+});
+
+//Submit the survey and validate the confirmation page
+casper.then(function() {
+   this.echo("Clicking on the Submit button");
+   this.click('#saveForm');
+   this.wait(1000, function() {
+        this.echo("Wait a second to allow page 3 to load.");
+   });
+});
+
+//validate the confirmation page title
+casper.then(function() {
+   this.test.assertTitleMatch(/Confirmation/, "Survey Submit confirmation page loaded");
+});
+
+casper.run(function() {
+   this.test.done();
+});
