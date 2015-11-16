@@ -1,6 +1,6 @@
 # qa
 # Introduction
-Included are my deliverables for the Documentation Project and the Automation Project, links to my test document for the process of uploading video to the schedule entry and my CasperJS file for the Hudl QA Project survey automation task.  I will describe in detail, the thought process and details of each item.
+Included are my deliverables for the Documentation Project and the Automation Project, links to my test document for the process of uploading video to the schedule entry and my CasperJS file for the Hudl QA Project survey automation task.  I will go through the thought process and details of each item.
 
 # Documentation Project
 ## Test document template
