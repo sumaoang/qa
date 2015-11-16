@@ -44,4 +44,4 @@ The flow of my automated test is as follows
 
 Two additional tests that I intended to include are validating that the state dropdown box filled correct and testing of the previous page button.  Having no prior experience with CasperJS and therefore learning during the process, I was not able to figure out the correct syntax to execute these two tests.
 
-Given more time and access to more resource both online and with individuals with more experience, I will be able to resolve the syntax issues.
+Given more time and access to more resources both online and with experienced individuals, I will be able to resolve the syntax issues.
